@@ -6,7 +6,7 @@ build:
     stage: build_stage
     script:
         - docker --version
-        - docker build -t simple-flask-app .
+        - docker build -t pyapp .
     tags:
         - ec2
         - server
@@ -14,7 +14,8 @@ build:
 deploy:
     stage: deploy_stage
     script:
-        - docker run -d --name simple-flask-app -p 80:8080 simple-flask-app
+        - docker run -d --name pythoncontainer -p 80:8080 pyapp
     tags:
         - ec2
         - server
+
