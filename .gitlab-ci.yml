@@ -15,7 +15,7 @@ deploy:
         - docker stop simple-flask-ap && docker rm simple-flask-app
         - docker run -d --name simple-flask-app -p 80:8080 simple-flask-app
         - docker login -u $USERNAME -p $TOKEN
-        - docker tag pyapp $USERNAME/simple-flask-app
+        - docker tag simple-flask-app $USERNAME/simple-flask-app
         - docker push $USERNAME/simple-flask-app
     tags:
         - ec2
