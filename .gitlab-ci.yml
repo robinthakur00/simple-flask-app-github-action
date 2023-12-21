@@ -1,7 +1,6 @@
 stages:
     - build_stage
     - deploy_stage
-
 build:
     stage: build_stage
     script:
@@ -10,7 +9,6 @@ build:
     tags:
         - ec2
         - server
-
 deploy:
     stage: deploy_stage
     script:
