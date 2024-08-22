@@ -22,7 +22,7 @@ jobs:
       run: docker build -t simple-flask-app-githubaction .
 
     - name: Tag Docker image
-      run: docker tag simple-flask-app ${{ secrets.USERNAME }}/simple-flask-app-githubaction
+      run: docker tag simple-flask-app-githubaction ${{ secrets.USERNAME }}/simple-flask-app-githubaction
 
     - name: Push Docker image to Docker Hub
       run: docker push ${{ secrets.USERNAME }}/simple-flask-app-githubaction
